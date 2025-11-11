@@ -3,84 +3,35 @@
 ## AIM
 To develop an LSTM-based model for recognizing the named entities in the text.
 
-## THEORY
-
-
-## Neural Network Model
-Include the neural network model diagram.
-
 ## DESIGN STEPS
-### STEP 1: 
 
-Write your own steps
+1. Data Preparation – Load and preprocess the NER dataset, extract unique words and tags, and encode them as integers.
 
-### STEP 2: 
+2. Sentence Grouping – Group words and corresponding tags by sentence for sequence labeling.
 
+3. Model Building – Design a Bidirectional LSTM (BiLSTM) network with embedding, dropout, and linear output layers.
 
+4. Training – Train the model using CrossEntropyLoss and Adam optimizer, tracking training and validation loss.
 
-### STEP 3: 
+5. Evaluation and Visualization – Generate the classification report, visualize loss curves, and perform word-level predictions.
 
-
-
-### STEP 4: 
-
-
-
-### STEP 5: 
-
-
-
-### STEP 6: 
-
-
-
-
-
-## PROGRAM
-
-### Name:
-
-### Register Number:
-
-```python
-class BiLSTMTagger(nn.Module):
-    # Include your code here
-
-
-
-
-
-
-
-    def forward(self, input_ids):
-        # Include your code here
-        
-
-
-model = 
-loss_fn = 
-optimizer = 
-
-
-# Training and Evaluation Functions
-def train_model(model, train_loader, test_loader, loss_fn, optimizer, epochs=3):
-    # Include the training and evaluation functions
-
-
-
-    return train_losses, val_losses
-
-
-```
 
 ### OUTPUT
 
 ## Loss Vs Epoch Plot
 
-Include your plot here
+<img width="941" height="616" alt="image" src="https://github.com/user-attachments/assets/2950a306-6694-444f-a9cd-429e881e1ec2" />
+
 
 ### Sample Text Prediction
-Include your sample text prediction here
+
+<img width="615" height="499" alt="image" src="https://github.com/user-attachments/assets/802c15cc-e02e-4d03-a884-905f20d65ec7" />
+
 
 ## RESULT
-Include your result here
+
+The BiLSTM Named Entity Recognition model was successfully implemented and trained on the NER dataset.
+
+After 3 epochs, the model achieved an overall accuracy of 86% with strong performance on major entity classes like GPE, PER, GEO, and ORG.
+
+The classification report and word-level predictions show that the model effectively recognizes named entities in text sequences.
